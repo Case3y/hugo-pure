@@ -1,14 +1,13 @@
 {{ partial "header.html" . }}
 
-{{if not .IsHome }}
 <h1>{{ .Title | markdownify }}</h1>
-{{ end }}
 
 {{ .Content }}
 
-{{if not .IsHome }}
+{{ range (where .Pages "Section" "!=" "").GroupByDate "2006" }}
+<h2 class="year">{{ .Key }}</h2>
 <ul>
-  {{ range (where .Pages "Section" "!=" "") }}
+  {{ range .Pages }}
   <li>
     <span class="date">{{ .Date.Format "2006/01/02" }}</span>
     <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
