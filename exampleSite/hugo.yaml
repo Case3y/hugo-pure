@@ -1,7 +1,7 @@
 baseurl: "https://example.org/"  # please update this to your actual URL
 locale: "en-us"
 title: "A minimal Hugo website"
-theme: "hugo-xmin"
+theme: "hugo-pure"
 googleAnalytics: ""
 disqusShortname: ""
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
@@ -16,21 +16,24 @@ menu:
     - name: Home
       url: ""
       weight: 1
+    - name: Blogs
+      url: "post/"
+      weight: 2
     - name: About
       url: "about/"
-      weight: 2
+      weight: 3
     - name: Categories
       url: "categories/"
-      weight: 3
+      weight: 4
     - name: Tags
       url: "tags/"
-      weight: 4
+      weight: 5
     - name: Subscribe
       url: "index.xml"
 
 params:
   description: "A website built through Hugo and blogdown."
-  footer: "&copy; [Yihui Xie](https://yihui.org) 2017 -- {Year} | [Github](https://github.com/yihui) | [BlueSky](https://bsky.app/profile/yihui.org)"
+  footer: "&copy; [Name](https://example.org) 2026 -- {Year} | [Github](https://github.com/example) | [BlueSky](https://bsky.app/profile/example)"
 
 security:
   allowContent: ['.*']
